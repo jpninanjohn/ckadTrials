@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nodeSelected
+  name: nodeSelected
+spec:
+  containers:
+  - image: busybox
+    name: nodeSelected
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/hostname: gke-leap-components-leap-components-p-32d2f185-37tf
+status: {}
